@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Puntos de Interés</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+    <header>
+        <h1>Gestión de Puntos de Interés</h1>
+    </header>
+    <main>
+        <section id="informacion">
+            <h2>Información</h2>
+            <div>
+                <label for="tipo">Tipo:</label>
+                <select id="tipo">
+                    <option value="">Selecciona un tipo</option>
+                </select>
+            </div>
+            <div>
+                <label for="ordenacion">Ordenación:</label>
+                <select id="ordenacion">
+                    <option value="asc">Ascendente</option>
+                    <option value="desc">Descendente</option>
+                </select>
+            </div>
+            <div>
+                <label for="filtroNombre">Filtrar por nombre:</label>
+                <input type="text" id="filtroNombre" placeholder="Introduce un nombre">
+            </div>
+            <div id="listaPuntos">
+                <p>No hay información a mostrar</p>
+            </div>
+            <p>Total de elementos: <span id="totalElementos">0</span></p>
+            <button id="limpiarLista">Limpiar Lista</button>
+            <div id="zonaArrastre">
+                <p>Arrastra aquí los archivos CSV</p>
+            </div>
+        </section>
+        <section id="mapa">
+            <h2>Mapa</h2>
+            <div id="map"></div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
