@@ -1,0 +1,11 @@
+id,codi,pais,ciutat,nom,direccio,tipus,latitud,longitud,puntuacio,horaris,preu,moneda,descripcio
+1,ES,Spain,Barcelona,Sagrada Familia,Carrer de Mallorca 401,Atraccio,41.4036,2.1744,9.5,9:00-18:00,25,€,
+2,ES,Spain,Barcelona,Parc Güell,Carrer d'Olot 5,Atraccio,41.4145,2.1527,8.7,8:30-19:30,10,€,
+3,ES,Spain,Barcelona,Museu Picasso,Carrer de Montcada 15-23,Museu,41.3853,2.1815,8.9,10:00-20:00,12,€,Alberga una de las colecciones más extensas de obras de Pablo Picasso
+4,ES,Spain,Barcelona,Casa Batlló,Passeig de Gràcia 43,Atraccio,41.3917,2.1649,9.1,9:00-21:00,25,€,
+5,ES,Spain,Barcelona,La Pedrera,Passeig de Gràcia 92,Atraccio,41.3954,2.1619,8.8,9:00-20:00,24,€,
+6,ES,Spain,Barcelona,Barri Gòtic,Ciutat Vella,Espai,41.3828,2.1782,9.3,,,€,
+7,ES,Spain,Barcelona,Mercat de la Boqueria,La Rambla 91,Espai,41.3816,2.1723,8.6,8:00-20:00,0,€,
+8,ES,Spain,Barcelona,MACBA,Plaça dels Àngels 1,Museu,41.3831,2.167,7.9,11:00-19:30,11,€,Museo de Arte Contemporáneo de Barcelona
+9,ES,Spain,Barcelona,Playa de la Barceloneta,Passeig Marítim,Espai,41.3792,2.1924,8.5,,,€,
+10,ES,Spain,Barcelona,Camp Nou,Carrer d'Arístides Maillol,Atraccio,41.3809,2.1206,9.2,10:00-18:30,28,€,

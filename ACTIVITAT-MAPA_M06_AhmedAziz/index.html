@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Puntos de Interés</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Puntos de Interés</h1>
+            <div id="paisInfo" class="pais-info">
+                <img id="bandera" src="" alt="Bandera del país" style="display: none;">
+                <span id="ciudadPais"></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="filtros">
+                <div class="filtro-item">
+                    <label for="tipoFiltro">Tipo:</label>
+                    <select id="tipoFiltro">
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+                <div class="filtro-item">
+                    <label for="ordenacionFiltro">Ordenación:</label>
+                    <select id="ordenacionFiltro">
+                        <option value="ascendente">Ascendente</option>
+                        <option value="descendente">Descendente</option>
+                    </select>
+                </div>
+                <div class="filtro-item">
+                    <label for="nombreFiltro">Filtrar por nombre:</label>
+                    <input type="text" id="nombreFiltro" placeholder="Introduce un nombre para filtrar">
+                </div>
+            </div>
+
+            <div class="contenido">
+                <div class="lista-container">
+                    <h2>Puntos de Interés</h2>
+                    <div id="listaPuntos" class="lista-puntos">
+                        <p>No hay información para mostrar</p>
+                    </div>
+                    <div class="total-elementos">
+                        <p>Total de elementos: <span id="totalElementos">0</span></p>
+                    </div>
+                    <button id="limpiarLista" class="btn">Limpiar Lista</button>
+                </div>
+                
+                <div class="mapa-container">
+                    <div id="mapa"></div>
+                </div>
+            </div>
+
+            <div id="dropZone" class="drop-zone">
+                <p>Arrastra aquí tu archivo CSV</p>
+            </div>
+        </main>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
