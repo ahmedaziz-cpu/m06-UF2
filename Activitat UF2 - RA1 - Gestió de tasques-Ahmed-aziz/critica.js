@@ -1,12 +1,11 @@
-class Critica extends Tasca {
+import { Tasca } from "./Tasca.js";
+
+export class Critica extends Tasca {
     #dataLimit;
     #descripcio;
 
-    // Aquesta subclasse afegeix data límit i descripcio a les tasques critiques.
-// Permet mostrar la informacio completa d'una tasca critica.
-
     constructor(id, nom, prioritat, dataLimit, descripcio) {
-        super(id, nom, prioritat, 'Critica');
+        super(id, nom, prioritat, "Crítica");
         this.#dataLimit = dataLimit;
         this.#descripcio = descripcio;
     }
@@ -20,6 +19,6 @@ class Critica extends Tasca {
     }
 
     mostrarInfoTasca() {
-        return `${super.mostrarInfoTasca()}, Data Limit: ${this.#dataLimit}, Descripcio: ${this.#descripcio}`;
+        return `${super.mostrarInfoTasca()} | Data límit: ${this.#dataLimit} | Descripció: ${this.#descripcio}`;
     }
 }
