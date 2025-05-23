@@ -1,12 +1,30 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="ca">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ejecutar JavaScript</title>
+    <meta charset="UTF-8">
+    <title>Gestor de Tasques</title>
+    <link rel="stylesheet" href="./styles.css">
+
 </head>
+
 <body>
-  <script src="test.js"></script>
-  <script src =app.js></script>
+    <h1>Gestor de Tasques</h1>
+    <div id="formTasca">
+        <input id="nomTasca" placeholder="Nom">
+        <input id="prioritatTasca" type="number" placeholder="Prioritat">
+        <select id="tipusTasca">
+            <option value="normal">Normal</option>
+            <option value="urgent">Urgent</option>
+            <option value="critica">Crítica</option>
+        </select>
+        <input id="recordatoriTasca" placeholder="Recordatori">
+        <input id="descripcioTasca" placeholder="Descripció">
+        <input id="dataLimitTasca" type="date">
+        <button onclick="afegirTascaHandler()">Afegir Tasca</button>
+    </div>
+    <h2>Total: <span id="totalTasques">0</span></h2>
+    <div id="llistaTasques"></div>
+
+    <script type="module" src="./main.js"></script>
 </body>
 </html>
