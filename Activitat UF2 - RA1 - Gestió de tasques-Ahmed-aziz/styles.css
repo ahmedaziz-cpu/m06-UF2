@@ -1,0 +1,41 @@
+body {
+    font-family: sans-serif;
+    background-color: #f3e8ff; 
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #7e57c2; 
+}
+
+#formTasca {
+    margin-bottom: 20px;
+}
+
+#formTasca input,
+#formTasca select {
+    margin: 5px;
+    padding: 5px;
+}
+
+button {
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.tasca {
+    background: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid #7e57c2;
+}
+
+.tasca.completada {
+    opacity: 0.6;
+    text-decoration: line-through;
+    border-left-color: #9ccc65;
+}
