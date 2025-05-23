@@ -1,19 +1,13 @@
-class Tasca {
+export class Tasca {
     static totalTasques = 0;
 
     #id;
     #nom;
-    #completada;
-    prioritat;
-    tipus;
-    
-// Aquesta classe gestiona tasques amb un id, nom, prioritat i tipus, i compta les tasques totals.
-// Permet marcar una tasca com completada i mostrar la seva informacio.
 
     constructor(id, nom, prioritat, tipus) {
         this.#id = id;
         this.#nom = nom;
-        this.#completada = false;
+        this.completada = false;
         this.prioritat = prioritat;
         this.tipus = tipus;
         Tasca.totalTasques++;
@@ -23,29 +17,24 @@ class Tasca {
         return this.#id;
     }
 
-    set id(id) {
-        this.#id = id;
-    }
-    
-
     get nom() {
         return this.#nom;
     }
 
-    set nom(nom) {
-        this.#nom = nom;
+    set nom(nouNom) {
+        this.#nom = nouNom;
     }
 
-    set completada(completada) {
-        this.#completada = completada;
+    set completada(estat) {
+        this._completada = estat;
     }
 
     estaCompletada() {
-        return this.#completada;
+        return this._completada;
     }
 
     mostrarInfoTasca() {
-        return `Nom: ${this.#nom}, Tipus: ${this.tipus}, Prioritat: ${this.prioritat}, Completada: ${this.#completada}`;
+        return `${this.nom} | Tipus: ${this.tipus} | Prioritat: ${this.prioritat} | Completada: ${this.estaCompletada() ? "Sí" : "No"}`;
     }
 
     static obtenirTotalTasques() {
