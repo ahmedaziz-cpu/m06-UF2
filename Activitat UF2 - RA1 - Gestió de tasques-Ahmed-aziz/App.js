@@ -1,39 +1,43 @@
-class App {
+export class App {
     #tasques = [];
-
-// Aquesta classe gestiona una llista de tasques, permetent afegir, completar, eliminar o modificar-ne el nom.
-// També mostra la llista de tasques i el total actual de tasques.
 
     afegirTasca(tasca) {
         this.#tasques.push(tasca);
+        this.actualitzarLlista();
     }
 
     completarTasca(id) {
         const tasca = this.#tasques.find(t => t.id === id);
-        if (tasca) {
-            tasca.completada = true;
-        }
+        if (tasca) tasca.completada = true;
+        this.actualitzarLlista();
     }
 
     eliminarTasca(id) {
         this.#tasques = this.#tasques.filter(t => t.id !== id);
-        Tasca.totalTasques--;
+        this.actualitzarLlista();
     }
 
     modificaNomTasca(id, nom) {
         const tasca = this.#tasques.find(t => t.id === id);
-        if (tasca) {
-            tasca.nom = nom;
-        }
+        if (tasca) tasca.nom = nom;
+        this.actualitzarLlista();
     }
 
     actualitzarLlista() {
-        this.#tasques.forEach(tasca => {
-            console.log(tasca.mostrarInfoTasca());
+        const llista = document.getElementById("llistaTasques");
+        llista.innerHTML = "";
+        this.#tasques.forEach(t => {
+            const div = document.createElement("div");
+            div.className = `tasca ${t.estaCompletada() ? "completada" : ""}`;
+            div.innerHTML = `<p>${t.mostrarInfoTasca()}</p>
+                             <button onclick="app.completarTasca(${t.id})">Completar</button>
+                             <button onclick="app.eliminarTasca(${t.id})">Eliminar</button>`;
+            llista.appendChild(div);
         });
+        document.getElementById("totalTasques").innerText = this.mostrarTotalTasques();
     }
 
     mostrarTotalTasques() {
-        console.log(`Total de tasques: ${Tasca.obtenirTotalTasques()}`);
+        return this.#tasques.length;
     }
 }
